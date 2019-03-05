@@ -35,7 +35,7 @@ public class SortTest {
 
 
     /**
-     * 快速排序
+     * 选择排序
      *
      * 在整个集合里面先找最小的元素,放到首位,然后再剩下的里面继续找最小的元素放在前面.依次类推
      *
@@ -45,7 +45,7 @@ public class SortTest {
      *
      * @param c 实现了Comparable接口的集合
      */
-    public static void fastSort(Comparable[] c ){
+    public static void selectSort(Comparable[] c ){
 
         int len = c.length;
 
@@ -130,7 +130,7 @@ public class SortTest {
 
         long start = System.currentTimeMillis();
         //快速排序
-        //fastSort(test);
+        //selectSort(test);
 
         //普通插入排序
         //insertSort(test);

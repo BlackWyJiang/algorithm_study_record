@@ -120,25 +120,32 @@ public class SortTest {
 
     public static void main(String[] args) {
 
-        Integer[] test = new Integer[10000000];
+        Integer[] test = new Integer[20];
 
         Random random = new Random();
         for (int i = 0; i < test.length; i++) {
-            test[i] = random.nextInt(500000000);
+            test[i] = random.nextInt(900);
         }
-       // System.out.println(Arrays.toString(test));
+        System.out.println(Arrays.toString(test));
 
         long start = System.currentTimeMillis();
-        //快速排序
+        //选择排序
         //selectSort(test);
 
         //普通插入排序
         //insertSort(test);
 
-        shellSort(test);
+        //希尔排序
+        //shellSort(test);
+
+        //归并排序
+        //new MergeSort().sort(test);
+
+        //快速排序
+        new FastSort().sort(test);
 
         System.out.println("times: " + (System.currentTimeMillis() - start));
-       // System.out.println(Arrays.toString(test));
+        System.out.println(Arrays.toString(test));
 
         System.out.println(isSorted(test));
     }

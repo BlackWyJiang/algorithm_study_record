@@ -1,4 +1,6 @@
-package sort;
+package sort.test;
+
+import sort.FastSort;
 
 import java.util.*;
 

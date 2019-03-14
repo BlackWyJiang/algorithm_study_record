@@ -33,5 +33,12 @@ public abstract class AbstractSort {
         c[j] = temp;
     }
 
+    /**
+     * 比较大小  i位置是否小于j位置
+     */
+    protected  boolean isLess(Comparable[] c,int i,int j){
+        return c[i].compareTo(c[j]) < 0;
+    }
+
     public abstract  void sort(Comparable[] comparables);
 }

@@ -1,6 +1,7 @@
 package sort.test;
 
 import sort.FastSort;
+import sort.HeapSort;
 
 import java.util.*;
 
@@ -122,11 +123,11 @@ public class SortTest {
 
     public static void main(String[] args) {
 
-        Integer[] test = new Integer[20];
+        Integer[] test = new Integer[5];
 
         Random random = new Random();
         for (int i = 0; i < test.length; i++) {
-            test[i] = random.nextInt(900);
+            test[i] = random.nextInt(100);
         }
         System.out.println(Arrays.toString(test));
 
@@ -144,7 +145,11 @@ public class SortTest {
         //new MergeSort().sort(test);
 
         //快速排序
-        new FastSort().sort(test);
+        //new FastSort().sort(test);
+
+        //堆排序
+        new HeapSort().sort(test);
+
 
         System.out.println("times: " + (System.currentTimeMillis() - start));
         System.out.println(Arrays.toString(test));
